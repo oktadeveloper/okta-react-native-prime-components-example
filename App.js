@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import { Alert } from 'react-native';
+import { Alert, StatusBar } from 'react-native';
 import { authorize, revoke } from 'react-native-app-auth';
 import {
   Container, Header, Input, Processing, Keypad, ButtonRow, Login
@@ -102,6 +102,7 @@ revoke = async () => {
     const { state } = this;
     return (
       <Container>
+        <StatusBar hidden />
         <Header>Prime Components</Header>
         <Input>{state.number}</Input>
         {state.loggedin ? (

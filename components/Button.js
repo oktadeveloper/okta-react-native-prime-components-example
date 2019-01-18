@@ -15,7 +15,7 @@ const ButtonBox = styled.TouchableOpacity`
 `;
 
 const ButtonText = styled.Text`
-  font-size: 30;
+  font-size: 25;
   font-family: Orbitron-Bold;
   color: ${props => (props.text === 'Go' || props.text === 'Back' ? 'green' : 'orange')};
 `;
