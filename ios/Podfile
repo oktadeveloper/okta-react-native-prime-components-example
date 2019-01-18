@@ -1,0 +1,9 @@
+platform :ios, '11.0'
+
+target 'prime_components' do
+  pod 'AppAuth', '>= 0.94'
+end
+
+target 'prime_components-tvOS' do
+  pod 'AppAuth', '>= 0.94'
+end
