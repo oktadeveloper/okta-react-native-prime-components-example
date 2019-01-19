@@ -9,7 +9,6 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-app-auth": "^4.0.0",
     "styled-components": "^4.1.1"
   },
   "devDependencies": {

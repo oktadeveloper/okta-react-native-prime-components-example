@@ -5,60 +5,17 @@
 
 import React, { Component } from 'react';
 import { Alert, StatusBar } from 'react-native';
-import { authorize, revoke } from 'react-native-app-auth';
 import {
   Container, Header, Input, Processing, Keypad, ButtonRow, Login
 } from './components';
-
-const config = {
-  issuer: 'https://dev-628819.oktapreview.com/oauth2/default',
-  clientId: '0oah624du50HDCjFr0h7',
-  redirectUrl: 'com.oktapreview.dev-628819:/callback',
-  additionalParameters: {},
-  scopes: ['openid', 'profile', 'email', 'offline_access']
-};
 
 class App extends Component {
   state = {
     number: 123456,
     factors: [],
     processing: false,
-    running: false,
-    loggedin: false,
-    accessToken: ''
+    running: false
   };
-
-
-authorize = async () => {
-  try {
-    const authState = await authorize(config);
-
-    this.setState(
-      {
-        loggedin: true,
-        accessToken: authState.accessToken
-      }
-    );
-  } catch (error) {
-    Alert.alert('Failed to log in', error.message);
-  }
-};
-
-revoke = async () => {
-  try {
-    const { state } = this;
-    await revoke(config, {
-      tokenToRevoke: state.accessToken,
-      sendClientId: true
-    });
-    this.setState({
-      accessToken: '',
-      loggedin: false
-    });
-  } catch (error) {
-    Alert.alert('Failed to revoke token', error.message);
-  }
-};
 
   getPrimes = (N) => {
     const factors = [];
@@ -105,11 +62,6 @@ revoke = async () => {
         <StatusBar hidden />
         <Header>Prime Components</Header>
         <Input>{state.number}</Input>
-        {state.loggedin ? (
-          <Login text="Logout" func={this.revoke}/>
-        ) : (
-          <Login text="Login" func={this.authorize} />
-        )}
         {state.processing ? (
           <Processing running={state.running} factors={state.factors} press={this.press} />
         ) : (
