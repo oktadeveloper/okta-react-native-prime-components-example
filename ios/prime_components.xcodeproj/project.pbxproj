@@ -1369,6 +1369,7 @@
 			baseConfigurationReference = D769E771D87D59F13EF0F268 /* Pods-prime_components.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 75YT4S8J8D;
@@ -1394,6 +1395,7 @@
 			baseConfigurationReference = 8FB060513A257ED2965F8FBE /* Pods-prime_components.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75YT4S8J8D;
 				HEADER_SEARCH_PATHS = (
