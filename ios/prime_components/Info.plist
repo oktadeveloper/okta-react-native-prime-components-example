@@ -48,8 +48,6 @@
 		<string>Chathura-ExtraBold.ttf</string>
 		<string>Jomhuria-Regular.ttf</string>
 	</array>
-	
-	
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

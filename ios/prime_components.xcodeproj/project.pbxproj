@@ -1384,7 +1384,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kewp.prime-components";
 				PRODUCT_NAME = prime_components;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1404,12 +1404,13 @@
 				);
 				INFOPLIST_FILE = prime_components/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kewp.prime-components";
 				PRODUCT_NAME = prime_components;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
